@@ -152,4 +152,46 @@ class stream extends client {
     
     return $this->request($params);
   }
+  
+  /**
+   *
+   * Favorite a user to your top users.
+   *
+   * @param $username The username you want to favorite.
+   *
+   * @return object Returns object boolean whether or not the user was favorited.
+   *
+   */
+  public function favorite($username) {
+    $uid = $this->get_user_id($username);  
+    $params = array(
+      'request' => '/stream/id/' . $uid . '/favorite',
+      'payload' => '',
+      'method' => 'POST'
+    );
+    
+    return $this->request($params);
+  }
+  
+  /**
+   *
+   * Unfavorites a user to your top users.
+   *
+   * @param $username The username you want to unfavorite.
+   *
+   * @return object Returns object boolean whether or not the user was unfavorited.
+   *
+   */
+  public function unfavorite($username) {
+    $uid = $this->get_user_id($username);  
+    $params = array(
+      'request' => '/stream/id/' . $uid . '/favorite',
+      'payload' => '',
+      'method' => 'DELETE'
+    );
+    
+    return $this->request($params);
+  }
+  
+  
 }

@@ -6,7 +6,7 @@ class post extends client {
   
   /**
    *
-   * Gets a list of posts by the currently logged in user.
+   * Gets a list of notifications by the currently logged in user.
    *
    * @return object Returns object array of the user's post (limit 500).
    *
@@ -58,11 +58,60 @@ class post extends client {
     return $this->request($params);
   }
   
+  /**
+   *
+   * Comments on specified post.
+   *
+   * @param $arg array
+   *          [post_id => post id]
+   *          [body => comment body]
+   *
+   * @return object Returns obeject boolean whether the comment was successfully sent.
+   *
+   */
   public function comment($arg) {
     $params = array(
       'request' => '/comment/',
       'payload' => array('postId' => $arg['post_id'], 'body' => $arg['body']),
       'method' => 'POST'
+    );
+    
+    return $this->request($params);
+  }
+  
+  /**
+   *
+   * Likes a specified post.
+   *
+   * @param $arg unsigned Post id of the post to like.
+   *
+   * @return object Returns obeject boolean whether the like was successfully sent.
+   *
+   */
+  public function like($arg) {
+    $params = array(
+      'request' => '/like/',
+      'payload' => array('postId' => $arg),
+      'method' => 'POST'
+    );
+    
+    return $this->request($params);
+  }
+  
+  /**
+   *
+   * Unlikes a specified post.
+   *
+   * @param $arg unsigned Post id of the post to unlike.
+   *
+   * @return object Returns obeject boolean whether the unlike was successfully sent.
+   *
+   */
+  public function unlike($arg) {
+    $params = array(
+      'request' => '/like/postID/' . $arg,
+      'payload' => array('postId' => $arg),
+      'method' => 'DELETE'
     );
     
     return $this->request($params);
