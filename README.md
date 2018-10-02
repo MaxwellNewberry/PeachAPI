@@ -42,8 +42,6 @@ Now you're ready to go! Let's get into some functions.
 
 ## Functions
 
-There are different categories I've separated the functions into depending on what each function does. You can look for more detailed documentation later but here's a quick rundown. **This is assuming you've set up your API similar to Quick Setup**
-
 * [Stream Function documentation](https://github.com/MaxwellNewberry/PeachAPI/wiki/Stream-Functions)
 * [Post Function documentation](https://github.com/MaxwellNewberry/PeachAPI/wiki/Post-Functions)
 
