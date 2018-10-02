@@ -105,7 +105,7 @@ Where the body is **optional**.
 **`comment($arg)`**: Array structure should be the following:
 ```php
 array(
-    'postId' => post id,
+    'post_id' => post id,
     'body' => comment
 )
 ```
