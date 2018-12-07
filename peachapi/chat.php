@@ -130,6 +130,9 @@ class chat extends client {
       }
       if($arg['body']) { $message['message'][] = (object) array('text' => $arg['body'], 'type' => 'text'); } 
     }
+    else {
+      return "You need to input a proper type.";
+    }
     $message['streamIDs'][] = $arg['id'];
     $message['streamIDs'][] = $arg['target_id'];
     $message['clientPostID'] = "";
@@ -171,6 +174,9 @@ class chat extends client {
         $message['message'][] = (object) array('$messageID' => '', '$isTail' => true, '$isFailTail' => true, "height" => $height, "src" => $src, "type" => "image", "width" => $width);
       }
       if($arg['body']) { $message['message'][] = (object) array('text' => $arg['body'], 'type' => 'text'); } 
+    }
+    else {
+      return "You need to input a proper type.";
     }
     $message['clientPostID'][0] = (object) array('');
     $params = array(

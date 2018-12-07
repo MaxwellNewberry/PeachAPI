@@ -50,6 +50,10 @@ class post extends client {
       }
       if($arg['body']) { $message['message'][] = (object) array('text' => $arg['body'], 'type' => 'text'); } 
     }
+    else {
+      return "You need to input a proper type.";
+    }
+   
     $params = array(
       'request' => '/post',
       'payload' => $message,
