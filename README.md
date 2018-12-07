@@ -44,4 +44,5 @@ Now you're ready to go! Let's get into some functions.
 
 * [Stream Function documentation](https://github.com/MaxwellNewberry/PeachAPI/wiki/Stream-Functions)
 * [Post Function documentation](https://github.com/MaxwellNewberry/PeachAPI/wiki/Post-Functions)
+* [Chat Function documentation](https://github.com/MaxwellNewberry/PeachAPI/wiki/Chat-Functions)
 
