@@ -4,7 +4,7 @@ PeachAPI, affectionately named PAPI, is a PHP Library created as the first unoff
 
 ## Easy Setup
 
-Setting up your project to work with PAPI is easy. Working with this library only takes a few steps to set up and once it is, you'll have full access to the library and it's components.
+Setting up your project to work with PAPI is easy. Working with this library only takes a few steps to set up and once it is, you'll have full access to the library and it's components. Please make sure you're running PHP7 on your web server otherwise it'll cause conflicts.
 
 ### Setting Up Account Token
 
